@@ -1,5 +1,6 @@
 # Knot
 =============
+
 _a little wholeness_
 
 Knot is an AGI research project. If Knot discovers the underlying algorithmic structure able to adapt itself to any environment it will have achieved it's goal aimed at by
@@ -21,7 +22,7 @@ From the jupyter lab terminal you can run `knot start` to start the application.
 
 Deployment Options:
 
-1. install knot on local machine: ```
+```# 1. install knot on local machine:
 cd <repositories>
 git clone https://github.com/LegitStack/knot.git
 cd knot
@@ -31,7 +32,7 @@ knot run
 start http:\\localhost:5001 && start http:\\localhost:5000
 knot start  # <--- inside jupyter at localhost:5001
 ```
-2. don't install knot on local machine (just in docker): ```
+```# 2. don't install knot on local machine (just in docker):
 cd <repositories>
 git clone https://github.com/LegitStack/knot.git
 cd knot
