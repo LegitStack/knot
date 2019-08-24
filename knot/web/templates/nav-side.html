@@ -1,0 +1,44 @@
+<aside id="left-sidebar-nav">
+  <ul id="slide-out" class="side-nav fixed leftside-navigation">
+    <li class="no-padding" style="margin-top: 15px;">
+      <ul class="collapsible" data-collapsible="accordion">
+        {% if sidenavs %}
+          {% for heading, subs in sidenavs.items() %}
+          	<li>
+          		<div class="collapsible-header">{{ heading }}</div>
+          		<div class="collapsible-body">
+            {% for sub, stuff in subs.items() %}
+              {% if stuff.items %}
+          			<div class="row" style="margin-bottom: 0px;">
+          				<div class="col s12 m12">
+          					<ul class="collapsible" data-collapsible="accordion">
+              				<li>
+          							<div class="collapsible-header">{{ sub }}</div>
+          							<div class="collapsible-body">
+                          {% for name, address in stuff.items() %}
+                            <a href="{{ address }}" id="nav__{{heading}} {{sub}}__{{name}}">
+                              <div id="nav_item"><i class="material-icons" style="margin-left: 32px;">insert_chart</i> {{ name }}</div>
+                            </a>
+                          {% endfor %}
+          							</div>
+          						</li>
+                    </ul>
+  				        </div>
+  			       </div>
+               {% else %}
+                 <a href="{{ stuff }}" id="nav__{{heading}}__{{sub}}">
+                   <div id="nav_item"><i class="material-icons" style="margin-left: 16px;">insert_chart</i> {{ sub }}</div>
+                 </a>
+               {% endif %}
+             {% endfor %}
+      		</div>
+      	</li>
+        {% endfor %}
+      {% endif %}
+      </ul>
+    </li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</aside>
