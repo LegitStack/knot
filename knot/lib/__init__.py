@@ -1,1 +1,1 @@
-from .true import return_true
+from .docker_support import detect_server

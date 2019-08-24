@@ -2,34 +2,14 @@
 
 {% block content %}
   <div class="">
-    <h3>Knot</h3>
-    <p>Welcome</p>
+    <h3></h3>
+    <p></p>
   </div>
 
   <!--work collections start-->
 <div id="work-collections">
   <div class="row">
     <div class="col s12 m12 l12">
-      <ul id="projects-collection" class="collection z-depth-1">
-        <li class="collection-item avatar">
-          <i class="material-icons monarch circle">star</i> <!--bookmark-->
-          <h6 class="collection-header m-0">Favorites</h6>
-        </li>
-        {% for name, details in favorites.items() %}
-        <a href="{{ url_for( details['path_url'] )}}">
-        <li class="collection-item">
-          <div class="row">
-            <div class="col s9">
-              <p class="collections-title">{{ name }}</p>
-              <p class="collections-content">{{ details['path_hierarchy'] }}</p>
-            </div>
-            <div class="col s3">
-              <span class="task-cat monarch">{{ details['type'] }}</span>
-            </div>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
     </div>
   </div>
 </div>

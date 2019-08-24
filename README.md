@@ -7,6 +7,45 @@ Knot is an AGI research project. If Knot discovers the underlying algorithmic st
 The Contributors.
 
 
+## Getting Started
+
+The app runs in a docker image. The UI is a Flask web app.
+
+If you `python setup.py <install | develop>` you can build and run the docker image from the command line using `knot build` and `knot run`
+
+If you do not install knot on your local machine you can build and run the docker image using the `docker_build` and `docker_run` files for windows (`.bat`) or linux (`.sh`).
+
+Once the docker file is running open a browser to [localhost:5001](localhost:5001) to see a jupyter lab terminal into the docker container.
+
+From the jupyter lab terminal you can run `knot start` to start the application. The application will be available at [localhost:5000](localhost:5000)
+
+Deployment Options:
+
+1. install knot on local machine: ```
+cd <repositories>
+git clone https://github.com/LegitStack/knot.git
+cd knot
+python setup.py develop
+knot build
+knot run
+start http:\\localhost:5001 && start http:\\localhost:5000
+knot start  # <--- inside jupyter at localhost:5001
+```
+2. don't install knot on local machine (just in docker): ```
+cd <repositories>
+git clone https://github.com/LegitStack/knot.git
+cd knot
+docker_build.bat
+docker_run.bat
+start http:\\localhost:5001 && start http:\\localhost:5000
+knot start  # <--- inside jupyter at localhost:5001
+```
+
+### Requirements
+
+  - docker
+
+
 ## Background
 
 This project makes two assumptions:

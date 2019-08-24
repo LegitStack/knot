@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-with open('README.md', 'r') as f:
+with open('readme.md', 'r') as f:
     LONG_DESCRIPTION = f.read()
 
-with open('README.md', 'r') as f:
+with open('version', 'r') as f:
     VERSION = f.read()
 
 NAME = 'knot'
@@ -28,4 +28,4 @@ setup(
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent', ],
     entry_points={
-        'console_scripts': ['knot = knot.cli:main', ]}, )
+        'console_scripts': ['knot = knot.cli.cli:main', ]}, )
