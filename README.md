@@ -1,5 +1,4 @@
 # Knot
----
 
 _a little wholeness_
 
