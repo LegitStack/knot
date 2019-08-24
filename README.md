@@ -12,6 +12,11 @@ The Contributors.
 The app runs in a docker image. The UI is a Flask web app.
 
 
+### Requirements
+
+  - docker
+
+
 ### Deployment:
 
 Option A. install knot on local machine:
@@ -47,12 +52,6 @@ If you do not install knot on your local machine you can build and run the docke
 Once the docker file is running open a browser to [localhost:5001](localhost:5001) to see a jupyter lab terminal into the docker container.
 
 From the jupyter lab terminal you can run `knot start` to start the application. The application will be available at [localhost:5000](localhost:5000)
-
-
-
-### Requirements
-
-  - docker
 
 
 ## Background
