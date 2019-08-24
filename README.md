@@ -12,9 +12,10 @@ The Contributors.
 The app runs in a docker image. The UI is a Flask web app.
 
 
-### Deployment Options:
+### Deployment:
 
-```# 1. install knot on local machine:
+Option A. install knot on local machine:
+```
 cd <repositories>
 git clone https://github.com/LegitStack/knot.git
 cd knot
@@ -25,7 +26,8 @@ start http:\\localhost:5001 && start http:\\localhost:5000
 knot start  # <--- inside jupyter at localhost:5001
 ```
 
-```# 2. don't install knot on local machine (just in docker):
+Option B. don't install knot on local machine (just in docker):
+```
 cd <repositories>
 git clone https://github.com/LegitStack/knot.git
 cd knot
